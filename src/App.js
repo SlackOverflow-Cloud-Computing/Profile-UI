@@ -9,7 +9,15 @@ const App = () => {
         <h1 className="main-title">
           Subwoofer - a Music Discovery Platform
         </h1>
-
+        <div className="section-container">
+          <h2 className="section-title">What is Subwoofer?</h2>
+          <p className="text-content">
+            Subwoofer is an innovative music platform that enhances your Spotify experience
+            by providing personalized song recommendations and playlist management.
+            We combine the power of Spotify's vast music library with advanced algorithms
+            to help you discover music you'll love.
+          </p>
+        </div>
         {/* Technology Stack */}
         <div className="section-container">
           <h2 className="section-title">Technology Stack</h2>
@@ -60,7 +68,7 @@ const App = () => {
               {
                 icon: "🎵",
                 title: "Music Discovery",
-                description: "Intelligent song recommendations based on user preferences and listening history"
+                description: "Explore new artists and genres with our intelligent recommendation engine"
               },
               {
                 icon: "📝",
@@ -68,14 +76,14 @@ const App = () => {
                 description: "Create, edit, and sync playlists between Subwoofer and Spotify"
               },
               {
-                icon: "👤",
-                title: "User Profiles",
-                description: "Personalized user experiences with custom preferences and history"
+                icon: "🔍",
+                title: "Personalized Recommendations",
+                description: "Intelligent song recommendations based on user preferences and listening history"
               },
               {
                 icon: "🔒",
-                title: "Secure Authentication",
-                description: "Safe and seamless login through Spotify OAuth integration"
+                title: "Spotify Authentication",
+                description: "Seamlessly connect with your Spotify account to access all your favorite music."
               }
             ].map((feature) => (
               <div key={feature.title} className="card">
