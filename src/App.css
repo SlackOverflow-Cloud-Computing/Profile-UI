@@ -1,239 +1,174 @@
-.App {
-  background-color: #101010;
-  color: #f1f1f1;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* App container */
+.app-container {
   min-height: 100vh;
   padding: 2rem;
+  background-color: #000000;
 }
 
-.intro-container {
-  max-width: 1200px;
+.content-wrapper {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 20px;
 }
 
+/* Main title */
 .main-title {
-  font-size: 3.5rem;
-  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background: linear-gradient(90deg, #4ade80 0%, #a855f7 50%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section styles */
+.section-container {
+  background-color: #111827;
+  border-radius: 12px;
+  padding: 2rem;
   margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #4ade80;
+  font-size: 2rem;
   font-weight: bold;
-  font-style: italic;
+  margin-bottom: 2rem;
 }
 
-.project-overview {
-  background: #1e1e1e;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 2rem 0 1rem;
-  font-weight: bold;
-}
-
-.architecture-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.arch-component {
-  background: #282828;
-  padding: 1.5rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.arch-component:hover {
-  transform: translateY(-5px);
-  background: #383838;
-}
-
-.arch-component h3 {
-  color: #217c41;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.arch-component ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.arch-component li {
-  margin: 0.8rem 0;
-  color: #f1f1f1;
-  font-size: 1.1rem;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.tech-item {
-  background: #282828;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.tech-item:hover {
-  transform: translateY(-5px);
-  background: #383838;
-}
-
-.tech-item h4 {
-  color: #1db954;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.tech-item ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.tech-item li {
-  margin: 0.8rem 0;
-  color: #f1f1f1;
-  font-size: 1.1rem;
-}
-
-.features-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.feature {
-  background: #282828;
-  padding: 1.5rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.feature:hover {
-  transform: translateY(-5px);
-  background: #383838;
-}
-
-.feature h4 {
-  color: #1db954;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.feature p {
-  color: #f1f1f1;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.team-section {
+.section-title.centered {
   text-align: center;
-  margin: 3rem 0;
-  padding: 2rem;
-  background: #282828;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
 }
 
-.team-section:hover {
-  transform: translateY(-5px);
-  background: #383838;
-}
-
-.team-section p {
-  color: #f1f1f1;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.team-members {
+/* Grid layouts */
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
-.team-member {
-  background: #1e1e1e;
-  padding: 1.2rem;
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Card styles */
+.card {
+  background-color: #1f2937;
   border-radius: 8px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(168, 85, 247, 0.2);
 }
 
-.team-member:hover {
-  transform: translateY(-5px);
-  background: #383838;
+.card:hover {
+  transform: translateY(-4px);
+  background-color: #374151;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.team-member h4 {
-  color: #1db954;
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.team-member p {
-  color: #f1f1f1;
-  font-size: 1.1rem;
+.card-icon {
+  font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
+.card-title {
+  color: #4ade80;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Text content */
+.text-content {
+  color: #d1d5db;
+}
+
+/* List styles */
+.tech-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-list li {
+  display: flex;
+  align-items: center;
+  color: #d1d5db;
+  margin-bottom: 0.75rem;
+}
+
+.tech-list li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #a855f7;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+/* Member ID style */
+.member-id {
+  color: #a855f7;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .grid-3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .main-title {
     font-size: 2.5rem;
   }
+}
 
-  .intro-container {
-    padding: 10px;
-  }
-
-  .architecture-grid,
-  .tech-grid,
-  .features-list {
+@media (max-width: 768px) {
+  .grid-3-cols,
+  .grid-2-cols {
     grid-template-columns: 1fr;
   }
 
-  h2 {
-    font-size: 1.8rem;
+  .app-container {
+    padding: 1rem;
   }
 
-  .arch-component h3,
-  .tech-item h4,
-  .feature h4 {
-    font-size: 1.2rem;
+  .main-title {
+    font-size: 2rem;
   }
 
-  .arch-component li,
-  .tech-item li,
-  .feature p,
-  .team-section p {
-    font-size: 1rem;
+  .section-title {
+    font-size: 1.5rem;
   }
 
-  .team-members {
-    grid-template-columns: 1fr;
-  }
-  
-  .team-member h4 {
-    font-size: 1.1rem;
-  }
-  
-  .team-member p {
-    font-size: 1rem;
+  .card {
+    padding: 1rem;
   }
 }
